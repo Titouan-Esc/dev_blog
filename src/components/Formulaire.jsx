@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const Formulaire = () => {
-  const handleChange = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setBouton(true);
+    setSubmit(true);
     setPost(title, content, tags);
     console.log(post);
   };
@@ -12,11 +12,11 @@ const Formulaire = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [tags, setTags] = useState([]);
-  const [bouton, setBouton] = useState(false);
+  const [submit, setSubmit] = useState(false);
 
   return (
     <div className="formulaire">
-      <form>
+      <form onSubmit={handleSubmit}>
         {/* Titre du poste */}
         <label htmlFor="titre">Titre du post :</label>
         <input
@@ -50,7 +50,7 @@ const Formulaire = () => {
           }}
         ></textarea>
         {/* Bouton input */}
-        <input type="submit" value={bouton} id="bouton" />
+        <input type="submit" value={submit} id="bouton" />
       </form>
     </div>
   );
