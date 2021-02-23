@@ -1,0 +1,16 @@
+nav {
+  height: 15vh;
+  @include flex_box(column, space-between, center);
+  padding: 15px 0;
+  background: linear-gradient(to bottom, $color_uno, $color_dos);
+
+  div {
+    p {
+      text-align: center;
+
+      &:hover {
+        color: $color_tres;
+      }
+    }
+  }
+}
