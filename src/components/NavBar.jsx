@@ -3,10 +3,16 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <nav>
-      <img src="" alt="" />
+      <NavLink to="/">
+        <h2>Titouan Escorneboueü</h2>
+      </NavLink>
       <div>
-        <p>Publications</p>
-        <p>Contact</p>
+        <NavLink to="/publication">
+          <p>Publications</p>
+        </NavLink>
+        <NavLink to="/contact">
+          <p>Contact</p>
+        </NavLink>
       </div>
     </nav>
   );
