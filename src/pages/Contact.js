@@ -1,7 +1,9 @@
+import Formulaire from "../components/Formulaire";
+
 const Contact = () => {
   return (
     <main>
-      <h1>CONTACT</h1>
+      <Formulaire />
     </main>
   );
 };
