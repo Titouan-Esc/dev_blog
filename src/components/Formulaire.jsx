@@ -8,11 +8,11 @@ const Formulaire = () => {
     console.log(post);
   };
 
-  const [post, setPost] = useState({});
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [tags, setTags] = useState([]);
   const [submit, setSubmit] = useState(false);
+  const [post, setPost] = useState({});
 
   return (
     <div className="formulaire">
@@ -37,20 +37,19 @@ const Formulaire = () => {
           onChange={(e) => setContent(e.target.value)}
         ></textarea>
         {/* Tags du post */}
-        <label htmlFor="hashtags">Tags/Catégories</label>
-        <textarea
-          name="hashtags"
+        <label htmlFor="tags">Tags/Catégories</label>
+        <input
+          type="text"
+          name="tags"
           id="tags"
-          cols="30"
-          rows="5"
           value={tags}
           onChange={(e) => {
             let newTags = e.target.value.split(",");
             setTags(newTags);
           }}
-        ></textarea>
+        />
         {/* Bouton input */}
-        <input type="submit" value={submit} id="bouton" />
+        <input type="submit" value="Créer son post" id="bouton" />
       </form>
     </div>
   );
