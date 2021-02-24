@@ -4,7 +4,11 @@ const Formulaire = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmit(true);
-    setPost(title, content, tags);
+    setPost({
+      ...{ title },
+      ...{ content },
+      ...{ tags },
+    });
     console.log(post);
   };
 
@@ -12,7 +16,7 @@ const Formulaire = () => {
   const [content, setContent] = useState("");
   const [tags, setTags] = useState([]);
   const [submit, setSubmit] = useState(false);
-  const [post, setPost] = useState({});
+  const [post, setPost] = useState([]);
 
   return (
     <div className="formulaire">
@@ -44,7 +48,7 @@ const Formulaire = () => {
           id="tags"
           value={tags}
           onChange={(e) => {
-            let newTags = e.target.value.split(",");
+            let newTags = e.target.value.toLowerCase().split(",");
             setTags(newTags);
           }}
         />
