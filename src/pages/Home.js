@@ -6,7 +6,7 @@ const Home = () => {
   const [post, setPost] = useState(data);
   return (
     <>
-      <main>
+      <main className="posts">
         <Posts post={post} />
       </main>
     </>
