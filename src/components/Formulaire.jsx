@@ -1,6 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Formulaire = () => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [tags, setTags] = useState([]);
+  const [submit, setSubmit] = useState(false);
+  const [post, setPost] = useState([]);
+
+  useEffect(() => {
+    console.log(post);
+  }, [post]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmit(true);
@@ -11,12 +21,6 @@ const Formulaire = () => {
     });
     console.log(post);
   };
-
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [tags, setTags] = useState([]);
-  const [submit, setSubmit] = useState(false);
-  const [post, setPost] = useState([]);
 
   return (
     <div className="formulaire">
