@@ -1,28 +1,27 @@
 .posts {
   height: 150vh;
   @include flex_box(column, space-around, center);
+
   div {
     width: 50vw;
+    height: 25vh;
     text-align: center;
-    margin: 10px 0;
+    margin: 15px 0;
     background-color: white;
     border-radius: 8px;
     box-shadow: 5px 5px 10px gray;
-
-    h2 {
-      margin-bottom: 25px;
-    }
-
-    p {
-      width: 70%;
-      border: 1px solid black;
-      border-radius: 5px;
-      margin: 20px auto;
-      padding: 10px;
-    }
-
-    .tags {
-      border: 0;
-    }
+  }
+  h2 {
+    margin-bottom: 25px;
+  }
+  p {
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  .tags {
+    border: 0;
   }
 }
