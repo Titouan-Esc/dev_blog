@@ -12,17 +12,4 @@ main {
   justify-content: center;
   align-items: center;
   background: linear-gradient(to left bottom, plum, white);
-
-  h1 {
-    animation: rotation 11s infinite linear;
-  }
-
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotateZ(359deg);
-    }
-  }
 }

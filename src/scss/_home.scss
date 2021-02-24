@@ -1,5 +1,6 @@
 .posts {
-  @include flex_box(column, space-between, center);
+  height: 150vh;
+  @include flex_box(column, space-around, center);
   div {
     width: 50vw;
     text-align: center;

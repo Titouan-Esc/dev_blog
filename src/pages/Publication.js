@@ -1,7 +1,9 @@
+import SinglePost from "../components/SinglePost";
+
 const Publication = () => {
   return (
     <main>
-      <h1>PUBLICATIONS</h1>
+      <SinglePost />
     </main>
   );
 };
