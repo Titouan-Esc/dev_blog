@@ -1,8 +1,13 @@
+import Posts from "../components/Posts";
+import React, { useState } from "react";
+import data from "../data";
+
 const Home = () => {
+  const [post, setPost] = useState(data);
   return (
     <>
       <main>
-        <h1>HOME</h1>
+        <Posts post={post} />
       </main>
     </>
   );
