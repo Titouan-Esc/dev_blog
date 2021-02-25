@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+const url = "http://localhost:3001/api/v1/posts";
 
 const Formulaire = () => {
   const [title, setTitle] = useState("");

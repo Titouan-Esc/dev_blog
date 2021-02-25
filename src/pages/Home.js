@@ -1,13 +1,30 @@
 import Posts from "../components/Posts";
-import React, { useState } from "react";
-import data from "../data";
+import React, { useState, useEffect } from "react";
+
+const url = "http://localhost:3001/api/v1/posts";
 
 const Home = () => {
-  const [post, setPost] = useState(data);
+  const [blogs, setBlogs] = useState([]);
+
+  const fetchBlogs = async () => {
+    try {
+      const response = await fetch(url);
+      const blogs = await response.json();
+      setBlogs(blogs);
+      console.log(blogs);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchBlogs();
+  }, []);
+
   return (
     <>
       <main className="posts">
-        <Posts post={post} />
+        <Posts post={blogs} />
       </main>
     </>
   );
