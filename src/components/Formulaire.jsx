@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Formulaire = () => {
   const [title, setTitle] = useState("");
@@ -7,8 +8,16 @@ const Formulaire = () => {
   const [submit, setSubmit] = useState(false);
   const [post, setPost] = useState([]);
 
+  function uploadData() {
+    const postUrl = "http://localhost:5000/api/v1/posts";
+    axios.post(postUrl, post).then(function (response) {
+      console.log(response);
+    });
+  }
+
   useEffect(() => {
     console.log(post);
+    uploadData();
   }, [post]);
 
   const handleSubmit = (e) => {
