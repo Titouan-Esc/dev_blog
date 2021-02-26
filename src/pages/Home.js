@@ -1,21 +1,21 @@
 import Posts from "../components/Posts";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const url = "http://localhost:3001/api/v1/posts";
+const url = "http://localhost:5000/api/v1/posts";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
 
-  const fetchBlogs = async () => {
+  async function fetchBlogs() {
     try {
-      const response = await fetch(url);
-      const blogs = await response.json();
-      setBlogs(blogs);
-      console.log(blogs);
+      const res = await axios.get(url);
+      console.log(res.data);
+      setBlogs(res.data);
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   useEffect(() => {
     fetchBlogs();
