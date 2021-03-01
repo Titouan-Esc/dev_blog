@@ -17,7 +17,7 @@ const Formulaire = () => {
 
   useEffect(() => {
     console.log(post);
-    uploadData();
+    uploadData(post);
   }, [post]);
 
   const handleSubmit = (e) => {
