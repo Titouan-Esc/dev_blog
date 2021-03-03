@@ -7,13 +7,10 @@ const NavBar = () => {
         <h2>Titouan Escorneboueü</h2>
       </NavLink>
       <div>
-        <NavLink to="/publication" activeClassName="nav">
-          <p>Publications</p>
-        </NavLink>
         <NavLink to="/contact" activeClassName="nav">
           <p>Contact</p>
         </NavLink>
-        <NavLink to="/me%20contacter">
+        <NavLink to="/me contacter">
           <p>Me contacter</p>
         </NavLink>
       </div>
