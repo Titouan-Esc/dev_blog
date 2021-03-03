@@ -13,6 +13,9 @@ const NavBar = () => {
         <NavLink to="/contact" activeClassName="nav">
           <p>Contact</p>
         </NavLink>
+        <NavLink to="/me%20contacter">
+          <p>Me contacter</p>
+        </NavLink>
       </div>
     </nav>
   );
